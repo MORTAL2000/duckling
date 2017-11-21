@@ -97,6 +97,7 @@ export class EntitySystemService {
      */
     replaceSystem(entitySystem: EntitySystem) {
         this._storeService.dispatch(replaceSystemAction(entitySystem));
+        this._nextKey = 0;
     }
 
     private get _system(): EntitySystem {
